@@ -5,6 +5,10 @@ body {
     font-family: Ariel, sans-serif;
 }
 
+p {
+    line-height: 2; /* Adjust this value for desired spacing */
+}
+
 h1 {
     color: white;
     text-align: center;
