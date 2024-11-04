@@ -8,11 +8,11 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    font-family: Paprika, sans-serif;
+    font-family: Paprika, system-ui;
 }
 
 h1 {
     color: white;
     text-align: center;
-    font-family: Paprika, sans-serif;
+    font-family: Ariel, sans-serif;
 }
