@@ -17,13 +17,13 @@
         <p>Welcome to $PYGLASS, your free look into the world of hidden paywalls. <br> Simply input the URL of your desired service into the space below, and watch as <br> $PYGLASS uncovers every sneaky cost associated with the service.</p>
         
         <form id="urlForm">
-            <label for="text-input">Enter a URL to begin:</label>
+            <label for="text-input">Enter a password to begin:</label>
             <input type="text" id="text-input" name="text-input" placeholder="Type here..." required>
             <button type="submit">Spy Paywalls</button>
         </form>
 
-        <!-- Hidden content initially -->
-        <div id="secretContent" style="display: none;">
+        <!-- Hidden content initially for both hulu and Amazon -->
+        <div id="huluContent" style="display: none;">
             <div class="secretBox">
                 <h3>Subscriptions</h3>
                 <p>The cow is purple.</p>
@@ -37,6 +37,22 @@
                 <p>The cow is green.</p>
             </div>
         </div>
+
+        <div id="amazonContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>The bird is purple.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>The bird is blue.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>The bird is green.</p>
+            </div>
+        </div>
+
     </main>
     <footer>
         <p>&copy; Team Half &amp; Half</p> <!-- Changed & to &amp; -->
@@ -50,13 +66,17 @@
             // Get the value entered in the text box
             const userInput = document.getElementById("text-input").value.toLowerCase();
 
-            // Check if the user input matches "netflix"
-            if (userInput === "netflix") {
-                // Reveal the secret content
-                document.getElementById("secretContent").style.display = "block";
-            } else {
-                // Hide the secret content if the input is not "netflix"
-                document.getElementById("secretContent").style.display = "none";
+            // Hide both content sections initially
+            document.getElementById("huluContent").style.display = "none";
+            document.getElementById("amazonContent").style.display = "none";
+
+            // Check if the user input matches "hulu"
+            if (userInput === "hulu") {
+                // Reveal the secret content with "cow"
+                document.getElementById("huluContent").style.display = "block";
+            } else if (userInput === "amazon") {
+                // Reveal the secret content with "bird"
+                document.getElementById("amazonContent").style.display = "block";
             }
 
             // Optionally clear the input field after submission
@@ -66,7 +86,7 @@
 
     <style>
         /* Style for the secret content container */
-        #secretContent {
+        #huluContent, #amazonContent {
             display: none; /* Hidden by default */
             width: 75%; /* 75% of the page width */
             margin: 20px auto; /* Centered horizontally with a margin */
