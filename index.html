@@ -24,7 +24,15 @@
 
         <!-- Hidden content initially -->
         <div id="secretContent" style="display: none;">
-            <p>The cow is purple.</p>
+            <div class="secretBox">
+                <p>The cow is purple.</p>
+            </div>
+            <div class="secretBox">
+                <p>The cow is blue.</p>
+            </div>
+            <div class="secretBox">
+                <p>The cow is green.</p>
+            </div>
         </div>
     </main>
     <footer>
@@ -54,19 +62,32 @@
     </script>
 
     <style>
-        /* Style for the secret content box */
+        /* Style for the secret content container */
         #secretContent {
             display: none; /* Hidden by default */
+            width: 75%; /* 75% of the page width */
+            margin: 20px auto; /* Centered horizontally with a margin */
+        }
+
+        /* Style for individual secret boxes */
+        .secretBox {
             background-color: black; /* Black background */
             color: white; /* White text */
             border: 2px solid white; /* White border */
-            width: 75%; /* 75% of the page width */
-            height: 25vh; /* 75% of the viewport height */
-            margin: 20px auto; /* Centered horizontally with a margin */
+            width: 100%; /* Full width of the container */
+            height: 25vh; /* 25% of the viewport height */
+            margin-bottom: 10px; /* Space between boxes */
             padding: 20px; /* Padding inside the box */
             box-sizing: border-box; /* Ensure padding is included in width/height */
             border-radius: 10px; /* Optional rounded corners */
-            overflow: auto; /* Allows scrolling if the content overflows */
+            overflow: auto; /* Allows scrolling if content overflows */
+        }
+
+        /* Style for each box's content */
+        .secretBox p {
+            margin: 0; /* Remove default margin */
+            font-size: 1.5em; /* Larger text */
+            text-align: center; /* Center the text */
         }
     </style>
 </body>
