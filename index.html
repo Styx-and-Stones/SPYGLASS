@@ -16,14 +16,41 @@
     <main>
         <p>Welcome to $PYGLASS, your free look into the world of hidden paywalls. <br> Simply input the URL of your desired service into the space below, and watch as <br> $PYGLASS uncovers every sneaky cost associated with the service.</p>
         
-        <form>
+        <form id="urlForm">
             <label for="text-input">Enter a URL to begin:</label>
             <input type="text" id="text-input" name="text-input" placeholder="Type here..." required>
             <button type="submit">Spy Paywalls</button>
         </form>
+
+        <!-- Hidden content initially -->
+        <div id="secretContent" style="display: none; margin-top: 20px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd;">
+            <p>The cow is purple.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; Team Half &amp; Half</p> <!-- Changed & to &amp; -->
     </footer>
+
+    <script>
+        // Listen for form submission
+        document.getElementById("urlForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get the value entered in the text box
+            const userInput = document.getElementById("text-input").value.toLowerCase();
+
+            // Check if the user input matches "netflix"
+            if (userInput === "netflix") {
+                // Reveal the secret content
+                document.getElementById("secretContent").style.display = "block";
+            } else {
+                // Hide the secret content if the input is not "netflix"
+                document.getElementById("secretContent").style.display = "none";
+            }
+
+            // Optionally clear the input field after submission
+            document.getElementById("text-input").value = "";
+        });
+    </script>
 </body>
 </html>
