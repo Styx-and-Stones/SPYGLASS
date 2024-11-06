@@ -17,24 +17,30 @@
         <p>Welcome to $PYGLASS, your free look into the world of hidden paywalls. <br> Simply input the URL of your desired service into the space below, and watch as <br> $PYGLASS uncovers every sneaky cost associated with the service.</p>
         
         <form id="urlForm">
-            <label for="text-input">Enter a password to begin:</label>
+            <label for="text-input">Enter a URL to begin:</label>
             <input type="text" id="text-input" name="text-input" placeholder="Type here..." required>
             <button type="submit">Spy Paywalls</button>
         </form>
 
-        <!-- Hidden content initially for both hulu and Amazon -->
-        <div id="huluContent" style="display: none;">
+        <!-- Hidden content initially for both spotify and Amazon -->
+        <div id="spotifyContent" style="display: none;">
             <div class="secretBox">
                 <h3>Subscriptions</h3>
-                <p>The cow is purple.</p>
+                <p>Free: ads, low audio quality, inability to pick individual songs, ect.</p>
+                <p>Basic: $11.99/month, no ads, downloading music</p>
+                <p>Duo: $16.99/month, same as Basic, for two people</p>
+                <p>Student: free for one month, $5.99/month after that</p>
+                <p>Family: 6 accounts for $19.99/month</p>
+
             </div>
             <div class="secretBox">
                 <h3>Flat Fees</h3>
-                <p>The cow is blue.</p>
+                <p>None</p>
             </div>
             <div class="secretBox">
                 <h3>Ad Presence</h3>
-                <p>The cow is green.</p>
+                <p>Without subscription: Average of 1 Ad for every 3 tracks</p>
+                <p>With subscription: None</p>
             </div>
         </div>
 
@@ -67,13 +73,13 @@
             const userInput = document.getElementById("text-input").value.toLowerCase();
 
             // Hide both content sections initially
-            document.getElementById("huluContent").style.display = "none";
+            document.getElementById("spotifyContent").style.display = "none";
             document.getElementById("amazonContent").style.display = "none";
 
-            // Check if the user input matches "hulu"
-            if (userInput === "hulu") {
+            // Check if the user input matches "spotify"
+            if (userInput === "spotify") {
                 // Reveal the secret content with "cow"
-                document.getElementById("huluContent").style.display = "block";
+                document.getElementById("spotifyContent").style.display = "block";
             } else if (userInput === "amazon") {
                 // Reveal the secret content with "bird"
                 document.getElementById("amazonContent").style.display = "block";
@@ -86,7 +92,7 @@
 
     <style>
         /* Style for the secret content container */
-        #huluContent, #amazonContent {
+        #spotifyContent, #amazonContent {
             display: none; /* Hidden by default */
             width: 75%; /* 75% of the page width */
             margin: 20px auto; /* Centered horizontally with a margin */
