@@ -22,7 +22,7 @@
             <button type="submit">Spy Paywalls</button>
         </form>
 
-        <!-- Hidden content initially for both spotify and Amazon -->
+
         <div id="spotifyContent" style="display: none;">
             <div class="secretBox">
                 <h3>Subscriptions</h3>
@@ -100,6 +100,8 @@
                 document.getElementById("amazonContent").style.display = "block";
              } else if (userInput === "https://www.washingtonpost.com/") {
                 document.getElementById("washingtonPostContent").style.display = "block";
+            } else {
+                <p>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</p>
             }
 
             // Optionally clear the input field after submission
