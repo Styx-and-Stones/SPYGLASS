@@ -74,6 +74,10 @@
                 <p>Minimal, nondisruptive.</p>
             </div>
         </div>
+        <div id="error" style="display: none;">
+            <div class="secretBox">
+                <h6>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</h6>
+        </div>
 
     </main>
     <footer>
@@ -101,7 +105,7 @@
              } else if (userInput === "https://www.washingtonpost.com/") {
                 document.getElementById("washingtonPostContent").style.display = "block";
             } else {
-                <p>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</p>
+                document.getElementById("error").style.display = "block";
             }
 
             // Optionally clear the input field after submission
