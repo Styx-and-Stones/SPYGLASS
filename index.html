@@ -74,6 +74,22 @@
                 <p>Minimal, nondisruptive.</p>
             </div>
         </div>
+                <div id="newYorkTimesContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Subscription is neccesary for access.</p>
+                <p>Free: 10 articles monthly</p>
+                <p>Basic Subscription: $6.25/week, unlimited access to all features.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>Moderate, nondisruptive.</p>
+            </div>
+        </div>
         <div id="error" style="display: none;">
             <div class="secretBox">
                 <h2>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</h2>
@@ -105,6 +121,8 @@
                 document.getElementById("amazonContent").style.display = "block";
              } else if (userInput === "https://www.washingtonpost.com/") {
                 document.getElementById("washingtonPostContent").style.display = "block";
+            }else if (userInput === "https://www.nytimes.com") {
+                document.getElementById("newYorkTimesContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
