@@ -143,6 +143,22 @@
                 <p>With any paid subscription: None.</p>
             </div>
         </div>
+
+        <div id="guardianContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Physical: $30/month, $90/quarter, $360/year, weekly newsletter.</p>
+                <p>Digital: $24.99/month, $249/year, weekly newsletter</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>Moderate, disruptive.</p>
+            </div>
+        </div>
         
         <div id="error" style="display: none;">
             <div class="secretBox">
@@ -183,6 +199,8 @@
                 document.getElementById("cheggContent").style.display = "block";
             }else if (userInput === "https://weather.com/") {
                 document.getElementById("weatherChannelContent").style.display = "block";
+            }else if (userInput === "https://www.theguardian.com/us") {
+                document.getElementById("guardianContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
