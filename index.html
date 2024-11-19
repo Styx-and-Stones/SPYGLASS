@@ -126,6 +126,24 @@
             </div>
         </div>
 
+        <div id="weatherChannelContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Free: Limited access.</p>
+                <p>Ad Free: $9.99 per year, limited access, ad free.</p>
+                <p>Premium - $29.99 per year. full access, ad free</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>With free subscription: Moderate, nondisruptive.</p>
+                <p>With any paid subscription: None.</p>
+            </div>
+        </div>
+        
         <div id="error" style="display: none;">
             <div class="secretBox">
                 <h2>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</h2>
@@ -163,6 +181,8 @@
                 document.getElementById("wallStreetJournalContent").style.display = "block";
             }else if (userInput === "https://www.chegg.com") {
                 document.getElementById("cheggContent").style.display = "block";
+            }else if (userInput === "https://weather.com/") {
+                document.getElementById("weatherChannelContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
