@@ -39,7 +39,7 @@
             </div>
             <div class="secretBox">
                 <h3>Ad Presence</h3>
-                <p>Without subscription: Average of 1 Ad for every 3 tracks</p>
+                <p>Without subscription: Average of 1 Ad for every 3 tracks, disruptive.</p>
                 <p>With subscription: None</p>
             </div>
         </div>
@@ -62,6 +62,7 @@
         <div id="washingtonPostContent" style="display: none;">
             <div class="secretBox">
                 <h3>Subscriptions</h3>
+                <p>Subscription is neccesary for access.</p>
                 <p>All-Access Digital: $120 per year, unlimited access to political/international news.</p>
                 <p>Premium Digital: $170 per year, additional subscription for another person, eBooks written by journalists</p>
             </div>
@@ -74,7 +75,8 @@
                 <p>Minimal, nondisruptive.</p>
             </div>
         </div>
-                <div id="newYorkTimesContent" style="display: none;">
+        
+        <div id="newYorkTimesContent" style="display: none;">
             <div class="secretBox">
                 <h3>Subscriptions</h3>
                 <p>Subscription is neccesary for access.</p>
@@ -90,6 +92,24 @@
                 <p>Moderate, nondisruptive.</p>
             </div>
         </div>
+
+        <div id="wallStreetJournalContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Subscription is neccesary for acess.</p>
+                <p>WSJ Digital: $9.75 per week, daily games and newsletter.</p>
+                <p>WSJ+: $13.75 per week, stock market services, business and financial reporting, investing tools, and technical analysis.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>Minimal, nondisruptive.</p>
+            </div>
+        </div>
+        
         <div id="error" style="display: none;">
             <div class="secretBox">
                 <h2>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</h2>
@@ -123,6 +143,8 @@
                 document.getElementById("washingtonPostContent").style.display = "block";
             }else if (userInput === "https://www.nytimes.com") {
                 document.getElementById("newYorkTimesContent").style.display = "block";
+            }else if (userInput === "https://www.wsj.com") {
+                document.getElementById("wallStreetJournalContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
