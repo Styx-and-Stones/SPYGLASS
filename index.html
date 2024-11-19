@@ -150,7 +150,7 @@
             document.getElementById("amazonContent").style.display = "none";
             document.getElementById("washingtonPostContent").style.display = "none";
 
-            // Check if the user input matches "spotify"
+            // Check if the user input matches service in database
             if (userInput === "https://open.spotify.com") {
                 document.getElementById("spotifyContent").style.display = "block";
             } else if (userInput === "www.amazon.com") {
@@ -161,7 +161,7 @@
                 document.getElementById("newYorkTimesContent").style.display = "block";
             }else if (userInput === "https://www.wsj.com") {
                 document.getElementById("wallStreetJournalContent").style.display = "block";
-            }else if (userInput === "https://www.chegg.com) {
+            }else if (userInput === "https://www.chegg.com") {
                 document.getElementById("cheggContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
