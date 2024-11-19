@@ -96,7 +96,7 @@
         <div id="wallStreetJournalContent" style="display: none;">
             <div class="secretBox">
                 <h3>Subscriptions</h3>
-                <p>Subscription is neccesary for acess.</p>
+                <p>Subscription is neccesary for access.</p>
                 <p>WSJ Digital: $9.75 per week, daily games and newsletter.</p>
                 <p>WSJ+: $13.75 per week, stock market services, business and financial reporting, investing tools, and technical analysis.</p>
             </div>
@@ -110,6 +110,22 @@
             </div>
         </div>
         
+        <div id="cheggContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Subscription is necessary for access.</p>
+                <p>Basic subscriptions: $14.95 per month, access to all features.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>None beyond subscription paywall.</p>
+            </div>
+        </div>
+
         <div id="error" style="display: none;">
             <div class="secretBox">
                 <h2>We're sorry, but the provided URL does not correspond with any service in the $PYGLASS database.</h2>
@@ -145,6 +161,8 @@
                 document.getElementById("newYorkTimesContent").style.display = "block";
             }else if (userInput === "https://www.wsj.com") {
                 document.getElementById("wallStreetJournalContent").style.display = "block";
+            }else if (userInput === "https://www.chegg.com) {
+                document.getElementById("cheggContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
