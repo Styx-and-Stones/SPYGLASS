@@ -159,6 +159,23 @@
                 <p>Moderate, disruptive.</p>
             </div>
         </div>
+
+        <div id="financialTimesContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Free: 8 articles per month.</p>
+                <p>Partial: $39 per month, unlimited articles.</p>
+                <p>Complete: $75 per month, unlimited articles, acess to exclusive newsletters.</p>
+                <p>Print: $50 per 3 months, physical copies of articles delivered 6 days a week. Comes with digital copies.</p>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>Minimal, disruptive.</p>
+            </div>
+        </div>
         
         <div id="error" style="display: none;">
             <div class="secretBox">
@@ -201,6 +218,8 @@
                 document.getElementById("weatherChannelContent").style.display = "block";
             }else if (userInput === "https://www.theguardian.com/us") {
                 document.getElementById("guardianContent").style.display = "block";
+            }else if (userInput === "https://www.ft.com/") {
+                document.getElementById("financialTimesContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
