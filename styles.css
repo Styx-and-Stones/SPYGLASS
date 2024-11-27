@@ -14,3 +14,7 @@ h1 {
     text-align: center;
     font-family: Paprika, system-ui;
 }
+
+h2 {
+    text-decoration: underline;
+}
