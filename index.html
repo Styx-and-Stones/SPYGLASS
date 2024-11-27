@@ -262,7 +262,16 @@
             document.getElementById("spotifyContent").style.display = "none";
             document.getElementById("amazonContent").style.display = "none";
             document.getElementById("washingtonPostContent").style.display = "none";
-
+            document.getElementById("newYorkTimesContent").style.display = "none";
+            document.getElementById("wallStreetJournalContent").style.display = "none";
+            document.getElementById("cheggContent").style.display = "none";
+            document.getElementById("weatherChannelContent").style.display = "none";
+            document.getElementById("guardianContent").style.display = "none";
+            document.getElementById("financialTimesContent").style.display = "none";
+            document.getElementById("economistContent").style.display = "none";
+            document.getElementById("quoraContent").style.display = "none";
+            document.getElementById("error").style.display = "none";
+            
             // Check if the user input matches service in database
             if (userInput === "https://open.spotify.com") {
                 document.getElementById("spotifyContent").style.display = "block";
@@ -297,7 +306,7 @@
 
     <style>
         /* Style for the secret content container */
-        #spotifyContent, #amazonContent, #washingtonPostContent {
+        #spotifyContent, #amazonContent, #washingtonPostContent, #newYorkTimesContent, #wallStreetJournalContent, #cheggContent, #weatherChannelContent, #guardianContent, #financialTimesContent, #economistContent, #quoraContent, #error {
             display: none; /* Hidden by default */
             width: 75%; /* 75% of the page width */
             margin: 20px auto; /* Centered horizontally with a margin */
