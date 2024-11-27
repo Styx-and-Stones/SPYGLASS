@@ -177,6 +177,22 @@
                 <p>Minimal, disruptive.</p>
             </div>
         </div>
+
+        <div id="economistContent" style="display: none;">
+            <div class="secretBox">
+                <h3>Subscriptions</h3>
+                <p>Digital Access: $22.90 per month, unlimited access to digital articles.</p>
+                <p>Digital and Print: $26.58 per month, unlimited acess to digital articles and weekly print.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Flat Fees</h3>
+                <p>None.</p>
+            </div>
+            <div class="secretBox">
+                <h3>Ad Presence</h3>
+                <p>Moderate, disruptive.</p>
+            </div>
+        </div>
         
         <div id="error" style="display: none;">
             <div class="secretBox">
@@ -221,6 +237,8 @@
                 document.getElementById("guardianContent").style.display = "block";
             }else if (userInput === "https://www.ft.com/") {
                 document.getElementById("financialTimesContent").style.display = "block";
+            }else if (userInput === "https://subscribenow.economist.com") {
+                document.getElementById("economistContent").style.display = "block";
             } else {
                 document.getElementById("error").style.display = "block";
             }
